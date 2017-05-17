@@ -20,12 +20,12 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Tarot {
-	private static final boolean ENABLE_REVERSALS = false;
-	private static final int DEFAULT_N_CARDS_TO_DRAW = 5;
+	protected static final boolean ENABLE_REVERSALS = false;
+	protected static final int DEFAULT_N_CARDS_TO_DRAW = 5;
 	
-	private static final String BASE_URL = "http://www.sacred-texts.com/tarot/pkt/";
-	private static ArrayList<Card> deck = new ArrayList<Card>();
-	private static Random random = new Random();
+	protected static final String BASE_URL = "http://www.sacred-texts.com/tarot/pkt/";
+	protected static ArrayList<Card> deck = new ArrayList<Card>();
+	protected static Random random = new Random();
 	
 	public static void main(String[] args) {
 		random.setSeed(System.currentTimeMillis()); // magic
@@ -64,7 +64,7 @@ public class Tarot {
 		}
 	}
 	
-	private static void init() {
+	protected static void init() {
 		// Major Arcana
 		deck.add(new Card("The Fool","pktar00.htm"));
 		deck.add(new Card("The Magician","pktar01.htm"));
