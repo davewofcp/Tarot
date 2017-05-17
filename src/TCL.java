@@ -22,17 +22,14 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 public class TCL extends Tarot {
+	private static int drawn = 0;
+	
 	public static void main(String[] args) throws NumberFormatException {
 		random.setSeed(System.currentTimeMillis()); // magic
 		init();
 		
 		System.out.println("Interactive Tarot Deck v1.0 by Dave Wollyung");
-		System.out.println("Commands:");
-		System.out.println("ask <question> - Seeds the algorithm with the given input");
-		System.out.println("draw [n] - Draws a card, or n cards if specified");
-		System.out.println("shuffle - Returns all cards to the deck and shuffles");
-		System.out.println("rev [on|off] - Toggle card reversals, off by default");
-		System.out.println("quit - Quits the program");
+		printHelp();
 		System.out.print("> ");
 		
 		BufferedReader buffer = new BufferedReader(new InputStreamReader(System.in));
@@ -44,11 +41,11 @@ public class TCL extends Tarot {
 				if (tokens.length == 0) return;
 				
 				switch (tokens[0]) {
+					default:
 					case "ask":
-						if (line.length() < 5) break;
-						String question = line.substring(4,line.length());
-						random.setSeed(Long.valueOf(question.hashCode()));
+						random.setSeed(Long.valueOf(line.hashCode()));
 						break;
+					case "":
 					case "draw":
 						int cards = 1;
 						if (tokens.length == 2) {
@@ -74,6 +71,7 @@ public class TCL extends Tarot {
 								if (rev > 0) card.setReversed(true);
 							}
 							chosen.add(card);
+							drawn++;
 							deck.remove(idx);
 						}
 							
@@ -84,9 +82,14 @@ public class TCL extends Tarot {
 						}
 						
 						break;
+					case "deck":
+						System.out.println("You have drawn "+drawn+" cards");
+						System.out.println(deck.size() +" cards remain in the deck");
+						break;
 					case "shuffle":
 						deck.clear();
 						init();
+						drawn = 0;
 						random.setSeed(System.currentTimeMillis());
 						System.out.println("Deck shuffled.");
 						break;
@@ -101,10 +104,11 @@ public class TCL extends Tarot {
 							System.out.println("Reversals disabled.");
 						}
 						break;
+					case "help":
+						printHelp();
+						break;
 					case "quit":
 						return;
-					default:
-						break;
 				}
 				System.out.print("> ");
 			}
@@ -112,5 +116,16 @@ public class TCL extends Tarot {
 			return;
 		}
 		return;
+	}
+	
+	private static void printHelp() {
+		System.out.println("Commands:");
+		System.out.println("[ask] <question> - Seeds the algorithm with the given input, default");
+		System.out.println("draw [n] - Draws a card, or n cards if specified (or hit enter)");
+		System.out.println("deck - Gives you a card count");
+		System.out.println("shuffle - Returns all cards to the deck and shuffles");
+		System.out.println("rev [on|off] - Toggle card reversals, off by default");
+		System.out.println("help - Prints this list of commands");
+		System.out.println("quit - Quits the program");
 	}
 }
