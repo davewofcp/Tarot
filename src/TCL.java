@@ -31,6 +31,7 @@ public class TCL extends Tarot {
 		System.out.println("ask <question> - Seeds the algorithm with the given input");
 		System.out.println("draw [n] - Draws a card, or n cards if specified");
 		System.out.println("shuffle - Returns all cards to the deck and shuffles");
+		System.out.println("rev [on|off] - Toggle card reversals, off by default");
 		System.out.println("quit - Quits the program");
 		System.out.print("> ");
 		
@@ -69,7 +70,7 @@ public class TCL extends Tarot {
 							int idx = random.nextInt(deck.size());
 							Card card = deck.get(idx);
 							if (ENABLE_REVERSALS) {
-								int rev = random.nextInt(1);
+								int rev = random.nextInt(2);
 								if (rev > 0) card.setReversed(true);
 							}
 							chosen.add(card);
@@ -88,6 +89,17 @@ public class TCL extends Tarot {
 						init();
 						random.setSeed(System.currentTimeMillis());
 						System.out.println("Deck shuffled.");
+						break;
+					case "rev":
+						if (tokens.length < 2) break;
+						if (tokens[1].equals("on")) {
+							ENABLE_REVERSALS = true;
+							System.out.println("Reversals enabled.");
+						}
+						if (tokens[1].equals("off")) {
+							ENABLE_REVERSALS = false;
+							System.out.println("Reversals disabled.");
+						}
 						break;
 					case "quit":
 						return;

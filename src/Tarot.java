@@ -20,7 +20,7 @@ import java.util.ArrayList;
 import java.util.Random;
 
 public class Tarot {
-	protected static final boolean ENABLE_REVERSALS = false;
+	protected static boolean ENABLE_REVERSALS = false;
 	protected static final int DEFAULT_N_CARDS_TO_DRAW = 5;
 	
 	protected static final String BASE_URL = "http://www.sacred-texts.com/tarot/pkt/";
@@ -50,7 +50,7 @@ public class Tarot {
 			int idx = random.nextInt(deck.size());
 			Card card = deck.get(idx);
 			if (ENABLE_REVERSALS) {
-				int rev = random.nextInt(1);
+				int rev = random.nextInt(2);
 				if (rev > 0) card.setReversed(true);
 			}
 			chosen.add(card);
