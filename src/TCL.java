@@ -43,7 +43,7 @@ public class TCL extends Tarot {
 				switch (tokens[0]) {
 					default:
 					case "ask":
-						random.setSeed(hash(line));
+						random.setSeed(hash(line) + System.currentTimeMillis());
 						break;
 					case "":
 					case "draw":
