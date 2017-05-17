@@ -43,7 +43,7 @@ public class TCL extends Tarot {
 				switch (tokens[0]) {
 					default:
 					case "ask":
-						random.setSeed(Long.valueOf(line.hashCode()));
+						random.setSeed(hash(line));
 						break;
 					case "":
 					case "draw":
@@ -127,5 +127,15 @@ public class TCL extends Tarot {
 		System.out.println("rev [on|off] - Toggle card reversals, off by default");
 		System.out.println("help - Prints this list of commands");
 		System.out.println("quit - Quits the program");
+	}
+	
+	public static long hash(String string) {
+		  long h = 1125899906842597L; // prime
+		  int len = string.length();
+
+		  for (int i = 0; i < len; i++) {
+		    h = 31*h + string.charAt(i);
+		  }
+		  return h;
 	}
 }
