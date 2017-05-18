@@ -103,10 +103,11 @@ public class TCL extends Tarot {
 						if (tokens[1].equals("on")) {
 							ENABLE_REVERSALS = true;
 							System.out.println("Reversals enabled.");
-						}
-						if (tokens[1].equals("off")) {
+						} else if (tokens[1].equals("off")) {
 							ENABLE_REVERSALS = false;
 							System.out.println("Reversals disabled.");
+						} else {
+							System.out.println("Only 'on' or 'off' are valid for this command.");
 						}
 						break;
 					case "help":
