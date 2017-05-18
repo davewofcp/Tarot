@@ -19,8 +19,4 @@ randomization seed, which is done via the "ask" command in the TCL program.
 There was also an IRC robot that dealt Tarot cards but would often repeat them, and that
 annoyed me. Both programs maintain the deck.
 
-Also, I disagree with The Pictorial Key to the Tarot's swapping of Strength and Justice
-based on the way I learned Tarot (Strength turns the Wheel of Fortune and so on), but
-since this order is hidden in the code I don't think it matters.
-
 Recommended reading: The Way of Tarot by Alejandro Jodorowsky
