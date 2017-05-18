@@ -79,10 +79,10 @@ public class Tarot {
 		deck.add(new Card("The Hierophant","pktar05.htm"));
 		deck.add(new Card("The Lovers","pktar06.htm"));
 		deck.add(new Card("The Chariot","pktar07.htm"));
-		deck.add(new Card("Strength","pktar08.htm"));
+		deck.add(new Card("Justice","pktar11.htm"));
 		deck.add(new Card("The Hermit","pktar09.htm"));
 		deck.add(new Card("Wheel of Fortune","pktar10.htm"));
-		deck.add(new Card("Justice","pktar11.htm"));
+		deck.add(new Card("Strength","pktar08.htm"));
 		deck.add(new Card("The Hanged Man","pktar12.htm"));
 		deck.add(new Card("Death","pktar13.htm"));
 		deck.add(new Card("Temperance","pktar14.htm"));
@@ -95,9 +95,9 @@ public class Tarot {
 		deck.add(new Card("The World","pktar21.htm"));
 		
 		// Minor Arcana
+		deck.add(new Card("Knight of Wands","pktwakn.htm"));
 		deck.add(new Card("King of Wands","pktwaki.htm"));
 		deck.add(new Card("Queen of Wands","pktwaqu.htm"));
-		deck.add(new Card("Knight of Wands","pktwakn.htm"));
 		deck.add(new Card("Page of Wands","pktwapa.htm"));
 		deck.add(new Card("Ten of Wands","pktwa10.htm"));
 		deck.add(new Card("Nine of Wands","pktwa09.htm"));
@@ -109,9 +109,9 @@ public class Tarot {
 		deck.add(new Card("Three of Wands","pktwa03.htm"));
 		deck.add(new Card("Two of Wands","pktwa02.htm"));
 		deck.add(new Card("Ace of Wands","pktwaac.htm"));
+		deck.add(new Card("Knight of Cups","pktcukn.htm"));
 		deck.add(new Card("King of Cups","pktcuki.htm"));
 		deck.add(new Card("Queen of Cups","pktcuqu.htm"));
-		deck.add(new Card("Knight of Cups","pktcukn.htm"));
 		deck.add(new Card("Page of Cups","pktcupa.htm"));
 		deck.add(new Card("Ten of Cups","pktcu10.htm"));
 		deck.add(new Card("Nine of Cups","pktcu09.htm"));
@@ -123,9 +123,9 @@ public class Tarot {
 		deck.add(new Card("Three of Cups","pktcu03.htm"));
 		deck.add(new Card("Two of Cups","pktcu02.htm"));
 		deck.add(new Card("Ace of Cups","pktcuac.htm"));
+		deck.add(new Card("Knight of Swords","pktswkn.htm"));
 		deck.add(new Card("King of Swords","pktswki.htm"));
 		deck.add(new Card("Queen of Swords","pktswqu.htm"));
-		deck.add(new Card("Knight of Swords","pktswkn.htm"));
 		deck.add(new Card("Page of Swords","pktswpa.htm"));
 		deck.add(new Card("Ten of Swords","pktsw10.htm"));
 		deck.add(new Card("Nine of Swords","pktsw09.htm"));
@@ -137,9 +137,9 @@ public class Tarot {
 		deck.add(new Card("Three of Swords","pktsw03.htm"));
 		deck.add(new Card("Two of Swords","pktsw02.htm"));
 		deck.add(new Card("Ace of Swords","pktswac.htm"));
+		deck.add(new Card("Knight of Pentacles","pktpekn.htm"));
 		deck.add(new Card("King of Pentacles","pktpeki.htm"));
 		deck.add(new Card("Queen of Pentacles","pktpequ.htm"));
-		deck.add(new Card("Knight of Pentacles","pktpekn.htm"));
 		deck.add(new Card("Page of Pentacles","pktpepa.htm"));
 		deck.add(new Card("Ten of Pentacles","pktpe10.htm"));
 		deck.add(new Card("Nine of Pentacles","pktpe09.htm"));
