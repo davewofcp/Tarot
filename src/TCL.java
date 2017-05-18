@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class TCL extends Tarot {
 	private static int drawn = 0;
 	
-	public static void main(String[] args) throws NumberFormatException {
+	public static void main(String[] args) {
 		random.setSeed(System.currentTimeMillis()); // magic
 		init();
 		
@@ -49,7 +49,12 @@ public class TCL extends Tarot {
 					case "draw":
 						int cards = 1;
 						if (tokens.length == 2) {
-							cards = Integer.parseInt(tokens[1]);
+							try {
+								cards = Integer.parseInt(tokens[1]);
+							} catch (NumberFormatException e) {
+								System.out.println("That's not a number.");
+								break;
+							}
 							
 							if (cards < 1) {
 								System.out.println("Must draw at least one card.");

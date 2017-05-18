@@ -33,7 +33,12 @@ public class Tarot {
 		
 		int cards = DEFAULT_N_CARDS_TO_DRAW;
 		if (args.length > 0) {
-			cards = Integer.parseInt(args[0]);
+			try {
+				cards = Integer.parseInt(args[0]);
+			} catch (NumberFormatException e) {
+				System.out.println("That's not a number.");
+				return;
+			}
 			if (cards < 1) {
 				System.out.println("Must draw at least one card.");
 				return;
