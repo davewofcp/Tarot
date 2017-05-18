@@ -22,3 +22,5 @@ annoyed me. Both programs maintain the deck.
 Also, I disagree with The Pictorial Key to the Tarot's swapping of Strength and Justice
 based on the way I learned Tarot (Strength turns the Wheel of Fortune and so on), but
 since this order is hidden in the code I don't think it matters.
+
+Recommended reading: The Way of Tarot by Alejandro Jodorowsky
