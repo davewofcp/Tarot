@@ -1,11 +1,14 @@
 Command-Line Tarot Deck
 and Interactive Tarot Deck
-by Dave Wollyung
+by Dave Wollyung and Oleg Wahl
 --------------------------
 
 Usage:
 java Tarot [n] - Draws the configured number of Tarot cards, or n cards if specified
 java TCL - Launches the interactive Tarot deck; a list of commands will be printed
+
+Or run the Tarot.jar file in the "bin" directory for a Windows-friendly version by
+Oleg Wahl.
 
 Comments
 --------
